@@ -30,6 +30,8 @@ def CopyRight(data):
     from sklearn.feature_extraction.text import TfidfVectorizer
     clean_org_names = pd.read_excel(
                 'data.xlsx')
+    cleanlist = list(clean_org_names.name)
+    data = data[~data['name'].isin(cleanlist)]
     #clean_org_names = clean_org_names.iloc[:, 2:7]
     final = pd.concat([clean_org_names[['name']], data[['name']]],
                         ignore_index=True, axis=0)
