@@ -22,7 +22,7 @@ def main():
         return f'<a href="data:file/csv;base64,{b64}" download="copyright.csv">Download csv file</a>'
 
     if data is not None:
-        df = pd.read_csv(data, encoding ='latin')
+        df = pd.read_csv(data, encoding = 'utf-8')
         st.dataframe(df.head())
 
         if(st.button("Copyright Names")):
