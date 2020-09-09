@@ -7,7 +7,6 @@ import sparse_dot_topn.sparse_dot_topn as ct
 
 def CopyRight(data):
 
-
     def ngrams(string, n=3):
         string = fix_text(string)  # fix text encoding issues
         # remove non ascii chars
@@ -110,4 +109,4 @@ def CopyRight(data):
     matches_df = matches_df[~matches_df['Match'].isin(list_data)]
     idx = matches_df.groupby(['Name'])['similarity'].transform(max) == matches_df['similarity']
     matches_df = matches_df[idx]
-    return matches_df
+    return matches_df.reset_index(drop = True)

@@ -4,6 +4,8 @@ import numpy as np
 import base64
 from copyright import CopyRight
 
+st.title("Copyright Name Finder")
+
 data = st.file_uploader("Upload a Dataset", type=["csv","txt"])
 
 
