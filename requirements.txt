@@ -1,0 +1,7 @@
+pandas
+ftfy
+numpy
+scipy
+sparse_dot_topn
+base64
+streamlit
