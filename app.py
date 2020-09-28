@@ -6,6 +6,8 @@ from copyright import CopyRight
 
 st.title("Copyright Name Finder")
 
+sentence = st.text_input("Input Your Text Here :")
+
 data = st.file_uploader("Upload a Dataset", type=["csv","txt"])
 
 
@@ -22,6 +24,12 @@ def main():
             csv.encode()
         ).decode()  # some strings <-> bytes conversions necessary here
         return f'<a href="data:file/csv;base64,{b64}" download="copyright.csv">Download csv file</a>'
+    
+    if sentence:
+        df3 = {'name' : [sentence]}
+        df3 = pd.DataFrame(df3)
+        df3 = CopyRight(df3)
+        st.dataframe(df3)
 
     if data is not None:
         df = pd.read_csv(data, encoding = 'utf-8')
@@ -30,7 +38,7 @@ def main():
         if(st.button("Copyright Names")):
             df2 = CopyRight(df)
             st.dataframe(df2)
-            st.markdown(download_file(df2), unsafe_allow_html = True)        
+            st.markdown(download_file(df2), unsafe_allow_html = True)   
 
 if __name__=='__main__':
     main()
