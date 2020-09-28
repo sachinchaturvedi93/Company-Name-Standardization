@@ -7,7 +7,7 @@ from copyright import CopyRight
 st.title("Copyright Name Finder")
 
 data = st.file_uploader("Upload a Dataset", type=["csv","txt"])
-
+st.set_option('deprecation.showfileUploaderEncoding', False)
 
 def main():
 
