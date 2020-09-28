@@ -52,6 +52,7 @@ def CopyRight(data):
         string = string.replace('SA', ' ')
         string = string.replace('AG', ' ')
         string = string.replace('NV', ' ')
+        string = string.replace('ToucheTohmatsu', ' ')
         ngrams = zip(*[string[i:] for i in range(n)])
         return [''.join(ngram) for ngram in ngrams]
 
