@@ -9,7 +9,7 @@ st.title("Copyright Name Finder")
 sentence = st.text_input("Input Your Text Here :")
 
 data = st.file_uploader("Upload a Dataset", type=["csv","txt"])
-
+st.set_option('deprecation.showfileUploaderEncoding', False)
 
 def main():
 
