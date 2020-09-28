@@ -35,6 +35,7 @@ def CopyRight(data):
         string = string.replace('Company', ' ')
         string = string.replace('US', ' ')
         string = string.replace('United States', ' ')
+        string = string.replace('International', ' ')
         ngrams = zip(*[string[i:] for i in range(n)])
         return [''.join(ngram) for ngram in ngrams]
 
