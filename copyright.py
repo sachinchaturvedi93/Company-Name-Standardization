@@ -53,6 +53,7 @@ def CopyRight(data):
         string = string.replace('AG', ' ')
         string = string.replace('NV', ' ')
         string = string.replace('ToucheTohmatsu', ' ')
+        string = string.replace('Companies', ' ')
         ngrams = zip(*[string[i:] for i in range(n)])
         return [''.join(ngram) for ngram in ngrams]
 
@@ -139,4 +140,6 @@ def CopyRight(data):
     matches_df = matches_df[~matches_df['Match'].isin(list_data)]
     idx = matches_df.groupby(['Name'])['similarity'].transform(max) == matches_df['similarity']
     matches_df = matches_df[idx]
-    return matches_df.reset_index(drop = True)
+    matches_df = matches_df.reset_index(drop = True)
+    matches_df = matches_df.drop(['similarity'], axis = 1)
+    return matches_df
