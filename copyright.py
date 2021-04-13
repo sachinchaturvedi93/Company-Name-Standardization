@@ -135,7 +135,7 @@ def CopyRight(data):
     matches_df = get_matches_df(matches, company_names, top = counter.size)
 
     matches_df = matches_df[matches_df['similarity']< 0.9999999999999]  # Remove all exact matches
-    list_data = list(data.name)
+    list_data = list(data.name) # Standard Name List
     matches_df = matches_df[matches_df['Name'].isin(list_data)]
     matches_df = matches_df[~matches_df['Match'].isin(list_data)]
     idx = matches_df.groupby(['Name'])['similarity'].transform(max) == matches_df['similarity']
