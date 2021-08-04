@@ -24,3 +24,6 @@ In this approach, you can see that JPMC is matched to the correct name, for Delo
 1. [Super Fast String Matching](https://bergvca.github.io/2017/10/14/super-fast-string-matching.html)
 2. [sparse_dot_topn](https://github.com/ing-bank/sparse_dot_topn)
 3. [Boosting the selection of the most similar entities in large scale datasets](https://medium.com/wbaa/https-medium-com-ingwbaa-boosting-selection-of-the-most-similar-entities-in-large-scale-datasets-450b3242e618)
+
+
+Reach out for any questions [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:sachin93@gmail.com) 
